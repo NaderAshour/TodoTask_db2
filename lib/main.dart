@@ -6,8 +6,10 @@ import 'package:todolast/drawer.dart';
 import 'package:todolast/todomodal.dart';
 import 'todomodal.dart';
 void main()async {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
   await DbHelper.instance.opendatabase();
+  runApp(const MyApp());
+
 }
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
